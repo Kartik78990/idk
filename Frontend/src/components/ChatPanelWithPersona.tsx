@@ -68,7 +68,7 @@ const ChatPanelWithPersona: React.FC<ChatPanelWithPersonaProps> = ({
   }, [messages, typingMessage]);
 
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:8000/ws");
+    const ws = new WebSocket("${import.meta.env.VITE_WS_URL}/ws");
 
     ws.onopen = () => console.log("✅ WebSocket connected");
 
