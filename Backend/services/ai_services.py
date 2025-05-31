@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 HUGGINGFACE_TOKEN = os.getenv("HF_TOKEN")
-MODEL = "meta-llama/Llama-3.1-8B-Instruct" 
+MODEL = "HuggingFaceH4/zephyr-7b-beta" 
 
 async def generate_response(message: str) -> str:
     headers = {"Authorization": f"Bearer {HUGGINGFACE_TOKEN}"}
