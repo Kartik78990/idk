@@ -43,7 +43,7 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ onBackClick }) => {
   }, [messages, typingMessage]);
 
   useEffect(() => {
-    const ws = new WebSocket(import.meta.env.VITE_WS_URL/ws);
+    const ws = new WebSocket(${import.meta.env.VITE_WS_URL}/ws);
 
     ws.onopen = () => console.log("✅ WebSocket connected");
 
