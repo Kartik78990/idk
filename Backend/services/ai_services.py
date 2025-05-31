@@ -8,9 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 HUGGINGFACE_TOKEN = os.getenv("HF_TOKEN")
-print("Token:", HUGGINGFACE_TOKEN)  # Only for debugging; remove later
-
-MODEL = "google/flan-t5-small"
+MODEL = "HuggingFaceH4/zephyr-7b-beta" 
 
 async def generate_response(message: str) -> str:
     headers = {"Authorization": f"Bearer {HUGGINGFACE_TOKEN}"}
