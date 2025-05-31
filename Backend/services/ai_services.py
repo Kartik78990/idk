@@ -10,7 +10,7 @@ load_dotenv()
 HUGGINGFACE_TOKEN = os.getenv("HF_TOKEN")
 print("Token:", HUGGINGFACE_TOKEN)  # Only for debugging; remove later
 
-MODEL = "deepseek-ai/DeepSeek-R1-0528" 
+MODEL = "google/flan-t5-small"
 
 async def generate_response(message: str) -> str:
     headers = {"Authorization": f"Bearer {HUGGINGFACE_TOKEN}"}
