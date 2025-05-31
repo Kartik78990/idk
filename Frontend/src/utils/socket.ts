@@ -24,7 +24,7 @@ export const initSocket = async (
     return;
   }
 
-  socket = new WebSocket('${import.meta.env.VITE_WS_URL}/ws');
+  socket = new WebSocket('wss://idk-1-5xzk.onrender.com/ws');
 
   socket.onopen = () => {
     console.log("✅ WebSocket connected");
