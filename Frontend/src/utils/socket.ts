@@ -24,7 +24,7 @@ export const initSocket = async (
     return;
   }
 
-  socket = new WebSocket(`ws://localhost:8000/ws`);
+  socket = new WebSocket(import.meta.env.VITE_WS_URL);
 
   socket.onopen = () => {
     console.log("✅ WebSocket connected");
